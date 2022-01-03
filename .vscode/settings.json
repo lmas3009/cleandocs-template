@@ -1,0 +1,6 @@
+{
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html"
+    }
+}
