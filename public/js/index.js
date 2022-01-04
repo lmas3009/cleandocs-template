@@ -9,3 +9,10 @@ function OnclickCloseMenu() {
   document.getElementById("close-menu").style.display = "none";
   document.getElementById("open-menu").style.display = "block";
 }
+
+// window.onscroll = function () {
+//   scrollFunction();
+// };
+// function scrollFunction() {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// }
