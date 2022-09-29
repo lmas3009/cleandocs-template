@@ -25,20 +25,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./public/js/index.js"></script>
 
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
     <!-- Replace the title name -->
     <title>Cleandocs-template</title>
   </head>
 
   <!-- Change the font-family to our choice -->
-  <body style="font-family: 'Poppins', sans-serif">
+  <body
+    style="font-family: 'Poppins', sans-serif"
+    class="dark:bg-slate-900 bg-white dark:text-white"
+  >
     <!-- Header start here -->
-    <header class="w-full p-3 border flex">
+    <header class="w-full p-3 border-b dark:border-b  flex">
       <nav
-        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
+        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start dark:text-white"
       >
         <ul>
           <!-- You can change your logo name -->
-          <li class="font-mono text-xl">CleanDocs</li>
+          <li class="font-mono text-xl">
+            CleanDocs
+          </li>
         </ul>
         <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
           <li
@@ -59,14 +70,45 @@
           <div>
             <ul class="flex">
               <!-- Change the href link to your respective social media accounts-->
-              <li class="mr-5">
-                <a href="#Github"><img src="./public/svgs/github.svg" alt="GitHub Link" /></a>
+              <li class="mr-5 flex dark:hidden" >
+                <p onclick="darkmode()">
+                  <img src="./public/svgs/sun.svg" alt="sun Link" />
+                </p>
               </li>
-              <li class="mr-5">
-                <a href="#Twitter"><img src="./public/svgs/twitter.svg" alt="Twitter Link" /></a>
+              <li class="mr-5 hidden dark:flex" >
+                <p onclick="lightmode()">
+                  <img src="./public/svgs/sun-dark.svg" alt="sun Link" />
+                </p>
               </li>
-              <li class="mr-0">
-                <a href="#Youtube"><img src="./public/svgs/youtube.svg" alt="YouTube Link" /></a>
+              <li class="mr-5 flex dark:hidden" >
+                <a href="#Github"
+                  ><img src="./public/svgs/github.svg" alt="GitHub Link"
+                /></a>
+              </li>
+              <li class="mr-5 hidden dark:flex" >
+                <a href="#Github"
+                  ><img src="./public/svgs/github-dark.svg" alt="GitHub Link"
+                /></a>
+              </li>
+              <li class="mr-5 flex dark:hidden" >
+                <a href="#Twitter"
+                  ><img src="./public/svgs/twitter.svg" alt="Twitter Link"
+                /></a>
+              </li>
+              <li class="mr-5 hidden dark:flex" >
+                <a href="#Twitter"
+                  ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
+                /></a>
+              </li>
+              <li class="mr-5 flex dark:hidden" >
+                <a href="#Youtube"
+                  ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
+                /></a>
+              </li>
+              <li class="mr-5 hidden dark:flex" >
+                <a href="#Youtube"
+                  ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
+                /></a>
               </li>
             </ul>
           </div>
@@ -143,7 +185,7 @@
             <div class="px-6 py-5">
               <p
                 tabindex="0"
-                class="focus:outline-none text-base font-medium leading-none text-gray-800 dark:text-gray-100 flex items-center"
+                class="focus:outline-none text-base font-medium leading-none text-white flex items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +201,7 @@
               </p>
               <p
                 tabindex="0"
-                class="focus:outline-none text-base leading-2 text-gray-500 dark:text-gray-400 pt-2"
+                class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
                 Section overview goes here Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
@@ -176,7 +218,7 @@
             <div class="px-6 py-5">
               <p
                 tabindex="0"
-                class="focus:outline-none text-base font-medium leading-none text-gray-800 dark:text-gray-100 flex items-center"
+                class="focus:outline-none text-base font-medium leading-none text-white flex items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +236,7 @@
               </p>
               <p
                 tabindex="0"
-                class="focus:outline-none text-base leading-2 text-gray-500 dark:text-gray-400 pt-2"
+                class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
                 Section overview goes here Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
@@ -211,7 +253,7 @@
             <div class="px-6 py-5">
               <p
                 tabindex="0"
-                class="focus:outline-none text-base font-medium leading-none text-gray-800 dark:text-gray-100 flex items-center"
+                class="focus:outline-none text-base font-medium leading-none text-white flex items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +271,7 @@
               </p>
               <p
                 tabindex="0"
-                class="focus:outline-none text-base leading-2 text-gray-500 dark:text-gray-400 pt-2"
+                class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
                 Section overview goes here Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
@@ -289,11 +331,11 @@
                     title="lmas3009"
                   />
                   <!-- Enter your github username -->
-                  <p class="absolute top-24 text-center">@lmas3009</p>
+                  <p class="absolute top-24 text-center text-black">@lmas3009</p>
                 </div>
               </a>
             </div>
-            
+
             <!-- Shrikant Dhayje Contribution -->
             <div
               role="listitem"
@@ -317,12 +359,10 @@
                     title="shriekdj"
                   />
                   <!-- Enter your github username -->
-                  <p class="absolute top-24 text-center">@shriekdj</p>
+                  <p class="absolute top-24 text-center text-black">@shriekdj</p>
                 </div>
               </a>
             </div>
-            
-            
           </div>
         </div>
       </div>
@@ -331,7 +371,7 @@
 
     <!-- Footer starts here -->
     <footer>
-      <div class="bg-black h-38 py-1 px-1 mt-5">
+      <div class="bg-white dark:bg-slate-900 h-38 py-1 px-1 mt-5">
         <div
           tabindex="0"
           aria-label="footer"
@@ -343,21 +383,21 @@
                 <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <a
                     href="./index.html"
-                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"
                     >Home
                   </a>
                 </li>
                 <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <a
                     href="./docs.html"
-                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"
                     >Documentation
                   </a>
                 </li>
                 <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <a
                     href="#contributors"
-                    class="text-white focus:outline-none focus:underline hover:text-gray-200"
+                    class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"
                     >Contribution
                   </a>
                 </li>
@@ -365,7 +405,7 @@
             </div>
             <div class="text-sm text-color mb-10 f-f-l">
               <!-- Rename cleandocs with your respective name -->
-              <p tabindex="0" class="text-white focus:outline-none">
+              <p tabindex="0" class="text-black dark:text-white focus:outline-none">
                 &copy; 2022 Cleandocs. All rights reserved
               </p>
             </div>

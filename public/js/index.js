@@ -16,3 +16,20 @@ function OnclickCloseMenu() {
 // function scrollFunction() {
 //   window.scrollTo({ top: 0, behavior: "smooth" });
 // }
+
+(function () {
+  console.log(localStorage.getItem("dark-mode"));
+  if (localStorage.getItem("dark-mode") === "On") {
+    document.documentElement.classList.add("dark");
+  }
+})();
+
+function darkmode() {
+  localStorage.setItem("dark-mode", "On");
+  document.documentElement.classList.add("dark");
+}
+
+function lightmode() {
+  localStorage.setItem("dark-mode", "Off");
+  document.documentElement.classList.remove("dark");
+}
