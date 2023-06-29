@@ -37,7 +37,7 @@
 
   <!-- Change the font-family to our choice -->
   <body
-    style="font-family: 'Poppins', sans-serif"
+    style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
     class="dark:bg-slate-900 bg-white dark:text-white"
   >
     <!-- Header start here -->
@@ -363,6 +363,22 @@
                 </div>
               </a>
             </div>
+
+            <!-- Tamion Contribution -->
+            <div role="list" aria-label="Team members" class="grid grid-flow-row md:grid-flow-col gap-10">
+              <!-- Replace href and src link -->
+              <div role="listitem" class="relative flex justify-center items-center">
+                <a href="https://github.com/notTamion" target="_blank">
+                  <div class="relative h-40 bg-white hover:drop-shadow-2xl w-48 flex justify-center rounded-md">
+                    <img src="./public/svgs/github.svg" class="absolute top-16 h-6 w-6" alt="github.img" />
+                    <!-- add github username under title -->
+                    <img src="https://avatars.githubusercontent.com/u/70228790?v=4" class="absolute w-20 h-20 -top-8 rounded-full"
+                      alt="display avatar" role="img" title="Tamion" />
+                    <!-- Enter your github username -->
+                    <p class="absolute top-24 text-center text-black">@notTamion</p>
+                  </div>
+                </a>
+              </div>
           </div>
         </div>
       </div>
@@ -370,7 +386,7 @@
     <!-- Contribution section ends here -->
 
     <!-- Footer starts here -->
-    <footer>
+    <footer style="margin-top: auto;">
       <div class="bg-white dark:bg-slate-900 h-38 py-1 px-1 mt-5">
         <div
           tabindex="0"
