@@ -37,7 +37,7 @@
 
   <!-- Change the font-family to our choice -->
   <body
-    style="font-family: 'Poppins', sans-serif"
+    style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
     class="dark:bg-slate-900 bg-white dark:text-white"
   >
     <!-- Header start here -->
@@ -52,11 +52,6 @@
           </li>
         </ul>
         <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
-          <li
-            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
-          >
-            <a href="./index.html">Home</a>
-          </li>
           <li
             class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
           >
@@ -100,12 +95,12 @@
                   ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
                 /></a>
               </li>
-              <li class="mr-5 flex dark:hidden" >
+              <li class="flex dark:hidden" >
                 <a href="#Youtube"
                   ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
                 /></a>
               </li>
-              <li class="mr-5 hidden dark:flex" >
+              <li class="hidden dark:flex" >
                 <a href="#Youtube"
                   ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
                 /></a>
@@ -156,7 +151,7 @@
         <p
           class="font-sans text-white text-center w-[300px] lg:w-[700px] md:w-[700px] sm:w-[600px] mt-4"
         >
-          Here your description goes this is the demo documentation for the
+          Your description goes here. This is the demo documentation for the
           show.
         </p>
       </div>
@@ -203,7 +198,7 @@
                 tabindex="0"
                 class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
-                Section overview goes here Lorem ipsum dolor, sit amet
+                Section overview goes here. Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
                 Doloribus dicta nesciunt dolorum necessitatibus! Esse, maxime
                 animi?
@@ -238,7 +233,7 @@
                 tabindex="0"
                 class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
-                Section overview goes here Lorem ipsum dolor, sit amet
+                Section overview goes here. Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
                 Doloribus dicta nesciunt dolorum necessitatibus! Esse, maxime
                 animi?
@@ -273,7 +268,7 @@
                 tabindex="0"
                 class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
               >
-                Section overview goes here Lorem ipsum dolor, sit amet
+                Section overview goes here. Lorem ipsum dolor, sit amet
                 consectetur adipisicing elit. Sunt recusandae asperiores ullam?
                 Doloribus dicta nesciunt dolorum necessitatibus! Esse, maxime
                 animi?
@@ -363,6 +358,22 @@
                 </div>
               </a>
             </div>
+
+            <!-- Tamion Contribution -->
+            <div role="list" aria-label="Team members" class="grid grid-flow-row md:grid-flow-col gap-10">
+              <!-- Replace href and src link -->
+              <div role="listitem" class="relative flex justify-center items-center">
+                <a href="https://github.com/notTamion" target="_blank">
+                  <div class="relative h-40 bg-white hover:drop-shadow-2xl w-48 flex justify-center rounded-md">
+                    <img src="./public/svgs/github.svg" class="absolute top-16 h-6 w-6" alt="github.img" />
+                    <!-- add github username under title -->
+                    <img src="https://avatars.githubusercontent.com/u/70228790?v=4" class="absolute w-20 h-20 -top-8 rounded-full"
+                      alt="display avatar" role="img" title="Tamion" />
+                    <!-- Enter your github username -->
+                    <p class="absolute top-24 text-center text-black">@notTamion</p>
+                  </div>
+                </a>
+              </div>
           </div>
         </div>
       </div>
@@ -370,7 +381,7 @@
     <!-- Contribution section ends here -->
 
     <!-- Footer starts here -->
-    <footer>
+    <footer style="margin-top: auto;">
       <div class="bg-white dark:bg-slate-900 h-38 py-1 px-1 mt-5">
         <div
           tabindex="0"
@@ -382,19 +393,12 @@
               <ul class="md:flex items-center">
                 <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <a
-                    href="./index.html"
-                    class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"
-                    >Home
-                  </a>
-                </li>
-                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
-                  <a
                     href="./docs.html"
                     class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"
                     >Documentation
                   </a>
                 </li>
-                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                <li class="cursor-pointer pt-4 lg:py-0">
                   <a
                     href="#contributors"
                     class="text-black dark:text-white focus:outline-none focus:underline hover:text-gray-200"

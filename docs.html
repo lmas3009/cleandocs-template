@@ -33,7 +33,7 @@
     <title>Cleandocs-template</title>
   </head>
   <body
-    style="font-family: 'Poppins', sans-serif"
+    style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
     class="dark:bg-slate-900 bg-white dark:text-white"
   >
     <!-- Header start here -->
@@ -84,12 +84,12 @@
                   ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
                 /></a>
               </li>
-              <li class="mr-5 flex dark:hidden">
+              <li class="flex dark:hidden">
                 <a href="#Youtube"
                   ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
                 /></a>
               </li>
-              <li class="mr-5 hidden dark:flex">
+              <li class="hidden dark:flex">
                 <a href="#Youtube"
                   ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
                 /></a>
@@ -357,7 +357,7 @@
                         tabindex="0"
                         class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
                       >
-                        Section overview goes here Lorem ipsum dolor, sit amet
+                        Section overview goes here. Lorem ipsum dolor, sit amet
                         consectetur adipisicing elit. Sunt recusandae asperiores
                         ullam? Doloribus dicta nesciunt dolorum necessitatibus!
                         Esse, maxime animi?
@@ -394,7 +394,7 @@
                         tabindex="0"
                         class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
                       >
-                        Section overview goes here Lorem ipsum dolor, sit amet
+                        Section overview goes here. Lorem ipsum dolor, sit amet
                         consectetur adipisicing elit. Sunt recusandae asperiores
                         ullam? Doloribus dicta nesciunt dolorum necessitatibus!
                         Esse, maxime animi?
@@ -454,7 +454,7 @@
       </div>
     </div>
     <!-- Footer starts here -->
-    <footer>
+    <footer style="margin-top: auto;">
       <div class="dark:bg-white bg-slate-900 h-38 py-1 px-1 mt-5">
         <div
           tabindex="0"
@@ -464,18 +464,11 @@
           <div class="text-black flex flex-col md:items-center f-f-l pt-0">
             <div class="my-6 text-base text-color f-f-l">
               <ul class="md:flex items-center">
-                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                <li class="cursor-pointer pt-4 lg:py-0">
                   <a
                     href="./index.html"
                     class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200"
                     >Home
-                  </a>
-                </li>
-                <li class="md:mr-6 cursor-pointer pt-4 lg:py-0">
-                  <a
-                    href="./docs.html"
-                    class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200"
-                    >Documentation
                   </a>
                 </li>
               </ul>
