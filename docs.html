@@ -1,295 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Change the description wrt project -->
-    <meta
-      name="description"
-      content="A Free and open-source documentation template built using html, tailwindcss and javascript."
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Change the description wrt project -->
+  <meta name="description"
+    content="A Free and open-source documentation template built using html, tailwindcss and javascript." />
 
-    <!-- stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="./public/styles/style.css">
+  <!-- stylesheets -->
 
-    <!-- You can add your own fonts from fonts.google.com -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="./public/styles/style.css">
 
-    <!-- Default Script tags -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./public/js/index.js"></script>
+  <!-- You can add your own fonts from fonts.google.com -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-      };
-    </script>
+  <!-- Default Script tags -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./public/js/index.js"></script>
 
-    <!-- Replace the title name -->
-    <title>Cleandocs-template</title>
-  </head>
-  <body
-    style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
-    class="dark:bg-slate-900 bg-white dark:text-white"
-  >
-    <!-- Header start here -->
-    <header class="w-full p-3 border-b dark:border-b flex">
-      <nav
-        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start"
-      >
-        <ul>
-          <!-- You can change your logo name -->
-          <li class="font-mono text-xl">CleanDocs</li>
-        </ul>
-        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
-          <li
-            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
-          >
-            <a href="./index.html">Home</a>
-          </li>
-          <div>
-            <ul class="flex">
-              <!-- Change the href link to your respective social media accounts-->
-              <li class="mr-5 flex dark:hidden">
-                <p onclick="darkmode()">
-                  <img src="./public/svgs/sun.svg" alt="sun Link" />
-                </p>
-              </li>
-              <li class="mr-5 hidden dark:flex">
-                <p onclick="lightmode()">
-                  <img src="./public/svgs/sun-dark.svg" alt="sun Link" />
-                </p>
-              </li>
-              <li class="mr-5 flex dark:hidden">
-                <a href="#Github"
-                  ><img src="./public/svgs/github.svg" alt="GitHub Link"
-                /></a>
-              </li>
-              <li class="mr-5 hidden dark:flex">
-                <a href="#Github"
-                  ><img src="./public/svgs/github-dark.svg" alt="GitHub Link"
-                /></a>
-              </li>
-              <li class="mr-5 flex dark:hidden">
-                <a href="#Twitter"
-                  ><img src="./public/svgs/twitter.svg" alt="Twitter Link"
-                /></a>
-              </li>
-              <li class="mr-5 hidden dark:flex">
-                <a href="#Twitter"
-                  ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
-                /></a>
-              </li>
-              <li class="flex dark:hidden">
-                <a href="#Youtube"
-                  ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
-                /></a>
-              </li>
-              <li class="hidden dark:flex">
-                <a href="#Youtube"
-                  ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </ul>
-      </nav>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
 
-      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </div>
-    </header>
-    <!-- Header ends here -->
+  <!-- Replace the title name -->
+  <title>Cleandocs-template</title>
+</head>
 
-    <div class="flex flex-col md:flex-row lg:flex-row">
-      <!-- Side menu starts here -->
-      <nav
-        class="flex ml-10 mt-7 md:fixed lg:fixed"
-        data-spy="affix"
-        data-offset-top="300"
-        data-offset-bottom="200"
-        role="navigation"
-      >
-        <ul class="nav">
-          <li class="font-medium"><a href="#link1">Getting Started</a></li>
-          <li class="font-medium">
-            <a href="#link2">Installation</a>
-            <ul class="nav">
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link2_1">Windows</a>
-              </li>
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link2_2">Mac Os</a>
-              </li>
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link2_3">Linux</a>
-              </li>
-            </ul>
-          </li>
-          <li class="font-medium"><a href="#link3">Configuration</a></li>
-          <li class="font-medium">
-            <a href="#link4">Components</a>
-            <ul class="nav">
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link4_1">Font Family</a>
-              </li>
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link4_2">Buttons</a>
-              </li>
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link4_3">Tailwind Css</a>
-              </li>
-              <li
-                class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]"
-              >
-                <a href="#link4_4">Cards</a>
-              </li>
-            </ul>
-          </li>
-          <li class="font-medium"><a href="#link5">Colors</a></li>
-          <li class="font-medium"><a href="#link6">Issues</a></li>
-        </ul>
-      </nav>
-      <!-- Side Menu ends here -->
-
-      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
-        <!-- Link1 start -->
-        <section id="link1">
-          <div class="h-full mt-10">
-            <p class="font-normal text-2xl">Getting Started</p>
-            <p class="leading-0 w-3/4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              quae similique nostrum, laborum, velit beatae esse nobis dolorem
-              saepe quas iste provident iusto assumenda facilis quisquam enim
-              quo. Beatae, fuga!
-            </p>
-            <p class="text-sm pt-5 pb-4">Small Description</p>
-          </div>
-        </section>
-        <!-- Link1 end -->
-
-        <!-- Link2 Start -->
-        <section id="link2">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Installation</p>
-            <p class="text-sm pb-4">Small Description</p>
-          </div>
-          <section id="link2_1" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Windows</p>
-              <p class="text-sm pb-4">Fork and clone the github repository.</p>
-              <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
-            </div>
-          </section>
-          <section id="link2_2" class="border-l-[2px]">
-            <div class="h-full mt-5 ml-5">
-              <p class="font-normal text-xl">Mac OS</p>
-              <p class="text-sm pb-4">Fork and clone the github repository.</p>
-              <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
-            </div>
-          </section>
-          <section id="link2_3" class="border-l-[2px]">
-            <div class="h-full mt-5 ml-5">
-              <p class="font-normal text-xl">Linux</p>
-              <p class="text-sm pb-4">Fork and clone the github repository.</p>
-              <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
-            </div>
-          </section>
-        </section>
-        <!-- Link2 Ends -->
-
-        <!-- Link3 start -->
-        <section id="link3">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Configuration</p>
-            <p class="leading-0 w-3/4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              quae similique nostrum, laborum, velit beatae esse nobis dolorem
-              saepe quas iste provident iusto assumenda facilis quisquam enim
-              quo. Beatae, fuga!
-            </p>
-            <p class="text-sm pt-5 pb-4">Small Description</p>
-          </div>
-        </section>
-        <!-- Link3 end -->
-
-        <!-- Link4 start -->
-        <section id="link4">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Components</p>
-            <p class="text-sm pt-2 pb-4">Components used are:</p>
-          </div>
-
-          <!-- Font Family start -->
-          <section id="link4_1" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Font Family</p>
-              <p class="text-sm pt-2 pb-4">
-                Poppins:
-                <a
-                  class="underline break-words"
-                  href="https://fonts.google.com/specimen/Poppins"
-                  target="_blank"
-                  >https://fonts.google.com/specimen/Poppins</a
-                >
+<body style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
+  class="dark:bg-slate-900 bg-white dark:text-white">
+  <!-- Header start here -->
+  <header class="w-full p-3 border-b dark:border-b  flex sticky top-0 z-10 dark:bg-slate-900 bg-white dark:text-white ">
+    <nav
+      class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start dark:text-white">
+      <ul>
+        <!-- You can change your logo name -->
+        <li class="font-mono text-xl">
+          <a href="./index.html">
+          CleanDocs
+        </a>
+        </li>
+      </ul>
+      <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="./docs.html">Documentation</a>
+        </li>
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="#contributors">Contribution</a>
+        </li>
+        <div>
+          <ul class="flex">
+            <!-- Change the href link to your respective social media accounts-->
+            <li class="mr-5 flex dark:hidden">
+              <p onclick="darkmode()">
+                <img src="./public/svgs/sun.svg" alt="sun Link" />
               </p>
-            </div>
-          </section>
-          <!-- Font Family ends -->
+            </li>
+            <li class="mr-5 hidden dark:flex">
+              <p onclick="lightmode()">
+                <img src="./public/svgs/sun-dark.svg" alt="sun Link" />
+              </p>
+            </li>
+            <li class="mr-5 flex dark:hidden">
+              <a href="#Github"><img src="./public/svgs/github.svg" alt="GitHub Link" /></a>
+            </li>
+            <li class="mr-5 hidden dark:flex">
+              <a href="#Github"><img src="./public/svgs/github-dark.svg" alt="GitHub Link" /></a>
+            </li>
+            <li class="mr-5 flex dark:hidden">
+              <a href="#Twitter"><img src="./public/svgs/twitter.svg" alt="Twitter Link" /></a>
+            </li>
+            <li class="mr-5 hidden dark:flex">
+              <a href="#Twitter"><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link" /></a>
+            </li>
+            <li class="flex dark:hidden">
+              <a href="#Youtube"><img src="./public/svgs/youtube.svg" alt="YouTube Link" /></a>
+            </li>
+            <li class="hidden dark:flex">
+              <a href="#Youtube"><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link" /></a>
+            </li>
+          </ul>
+        </div>
+      </ul>
+    </nav>
 
-          <!-- Buttons start -->
-          <section id="link4_2" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Buttons</p>
-              <div class="text-sm pt-5 pb-4">
-                <!-- <a
+    <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </header>
+  <!-- Header ends here -->
+
+  <div class="flex flex-col md:flex-row lg:flex-row">
+    <!-- Side menu starts here -->
+    <nav class="flex ml-10 mt-7 md:fixed lg:fixed" data-spy="affix" data-offset-top="300" data-offset-bottom="200"
+      role="navigation">
+      <ul class="nav">
+        <li class="font-medium"><a href="#link1">Getting Started</a></li>
+        <li class="font-medium">
+          <a href="#link2">Installation</a>
+          <ul class="nav">
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link2_1">Windows</a>
+            </li>
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link2_2">Mac Os</a>
+            </li>
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link2_3">Linux</a>
+            </li>
+          </ul>
+        </li>
+        <li class="font-medium"><a href="#link3">Configuration</a></li>
+        <li class="font-medium">
+          <a href="#link4">Components</a>
+          <ul class="nav">
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link4_1">Font Family</a>
+            </li>
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link4_2">Buttons</a>
+            </li>
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link4_3">Tailwind Css</a>
+            </li>
+            <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+              <a href="#link4_4">Cards</a>
+            </li>
+          </ul>
+        </li>
+        <li class="font-medium"><a href="#link5">Colors</a></li>
+        <li class="font-medium"><a href="#link6">Issues</a></li>
+      </ul>
+    </nav>
+    <!-- Side Menu ends here -->
+
+    <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+      <!-- Link1 start -->
+      <section id="link1">
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Getting Started</p>
+          <p class="leading-0 w-3/4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            quae similique nostrum, laborum, velit beatae esse nobis dolorem
+            saepe quas iste provident iusto assumenda facilis quisquam enim
+            quo. Beatae, fuga!
+          </p>
+          <p class="text-sm pt-5 pb-4">Small Description</p>
+        </div>
+      </section>
+      <!-- Link1 end -->
+
+      <!-- Link2 Start -->
+      <section id="link2">
+        <div class="h-full mt-5">
+          <p class="font-normal text-2xl">Installation</p>
+          <p class="text-sm pb-4">Small Description</p>
+        </div>
+        <section id="link2_1" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Windows</p>
+            <p class="text-sm pb-4">Fork and clone the github repository.</p>
+            <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
+          </div>
+        </section>
+        <section id="link2_2" class="border-l-[2px]">
+          <div class="h-full mt-5 ml-5">
+            <p class="font-normal text-xl">Mac OS</p>
+            <p class="text-sm pb-4">Fork and clone the github repository.</p>
+            <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
+          </div>
+        </section>
+        <section id="link2_3" class="border-l-[2px]">
+          <div class="h-full mt-5 ml-5">
+            <p class="font-normal text-xl">Linux</p>
+            <p class="text-sm pb-4">Fork and clone the github repository.</p>
+            <script src="https://gist.github.com/lmas3009/1de9a377390e49e4b7071a413112c679.js"></script>
+          </div>
+        </section>
+      </section>
+      <!-- Link2 Ends -->
+
+      <!-- Link3 start -->
+      <section id="link3">
+        <div class="h-full mt-5">
+          <p class="font-normal text-2xl">Configuration</p>
+          <p class="leading-0 w-3/4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            quae similique nostrum, laborum, velit beatae esse nobis dolorem
+            saepe quas iste provident iusto assumenda facilis quisquam enim
+            quo. Beatae, fuga!
+          </p>
+          <p class="text-sm pt-5 pb-4">Small Description</p>
+        </div>
+      </section>
+      <!-- Link3 end -->
+
+      <!-- Link4 start -->
+      <section id="link4">
+        <div class="h-full mt-5">
+          <p class="font-normal text-2xl">Components</p>
+          <p class="text-sm pt-2 pb-4">Components used are:</p>
+        </div>
+
+        <!-- Font Family start -->
+        <section id="link4_1" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Font Family</p>
+            <p class="text-sm pt-2 pb-4">
+              Poppins:
+              <a class="underline break-words" href="https://fonts.google.com/specimen/Poppins"
+                target="_blank">https://fonts.google.com/specimen/Poppins</a>
+            </p>
+          </div>
+        </section>
+        <!-- Font Family ends -->
+
+        <!-- Buttons start -->
+        <section id="link4_2" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Buttons</p>
+            <div class="text-sm pt-5 pb-4">
+              <!-- <a
                   href="javascript:void(0)"
                   class="text-white h-52 bg-red-600 p-2 w-44 rounded text-center mr-5"
                 >
@@ -311,244 +257,209 @@
                 </a>
                 <br /><br /> -->
 
-                <a href="javascript:void(0)" class="relative inline-flex items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
-                  <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
-                  <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
+              <a href="javascript:void(0)"
+                class="relative inline-flex items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+                <span
+                  class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+                <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
                   <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
                   <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
-                  </span>
-                  <span class="relative text-white">Get Started</span>
-                </a>
-                <br /><br />
+                </span>
+                <span class="relative text-white">Get Started</span>
+              </a>
+              <br /><br />
 
-                <a href="javascript:void(0)" class="relative inline-block text-lg group">
-                  <span class="relative z-10 block px-3 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+              <a href="javascript:void(0)" class="relative inline-block text-lg group">
+                <span
+                  class="relative z-10 block px-3 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                   <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-                  <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                  <span
+                    class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
                   <span class="relative text-base">Get Started</span>
-                  </span>
-                  <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-                </a>
-                <br /><br />
+                </span>
+                <span
+                  class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                  data-rounded="rounded-lg"></span>
+              </a>
+              <br /><br />
 
-                <a href="javascript:void(0)" class="relative inline-block px-4 py-2 font-medium group">
-                  <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                  <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                  <span class="relative text-black group-hover:text-white">Get Started</span>
-                  </a>
-                  <br /><br />
+              <a href="javascript:void(0)" class="relative inline-block px-4 py-2 font-medium group">
+                <span
+                  class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                <span class="relative text-black group-hover:text-white">Get Started</span>
+              </a>
+              <br /><br />
 
-                  <!-- <a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
+              <!-- <a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
                     <span class="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                     <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Get Started</span>
                     </a>
                     <br /><br /> -->
 
-                    <a href="javascript:void(0)" class="tailwind-button"><span>Get Started</span></a>
+              <a href="javascript:void(0)" class="tailwind-button"><span>Get Started</span></a>
 
 
-              </div>
             </div>
-          </section>
-          <!-- Buttons ends -->
-
-          <!-- Tailwind css start -->
-          <section id="link4_3" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Tailwind CSS</p>
-              <p class="text-sm pt-5 pb-4">
-                Install Tailwind CSS
-                <a
-                  href="https://tailwindcss.com"
-                  target="_blank"
-                  class="underline"
-                  >https://tailwindcss.com</a
-                >
-              </p>
-            </div>
-          </section>
-          <!-- Tailwind css ends -->
-
-          <!-- Cards start -->
-          <section id="link4_4" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Cards</p>
-              <div class="pt-5 pb-4 flex flex-cols">
-                <div
-                  class="max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:rounded"
-                >
-                  <div class="flex">
-                    <div class="px-6 py-5">
-                      <p
-                        tabindex="0"
-                        class="focus:outline-none text-base font-medium leading-none text-white flex items-center"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6 mr-2"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-                          />
-                        </svg>
-                        Introduction
-                      </p>
-                      <p
-                        tabindex="0"
-                        class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
-                      >
-                        Section overview goes here. Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Sunt recusandae asperiores
-                        ullam? Doloribus dicta nesciunt dolorum necessitatibus!
-                        Esse, maxime animi?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-5 pb-4 flex flex-cols">
-                <div
-                  class="max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:rounded"
-                >
-                  <div class="flex">
-                    <div class="px-6 py-5">
-                      <p
-                        tabindex="0"
-                        class="focus:outline-none text-base font-medium leading-none text-white flex items-center"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6 mr-2"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        Installation
-                      </p>
-                      <p
-                        tabindex="0"
-                        class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2"
-                      >
-                        Section overview goes here. Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Sunt recusandae asperiores
-                        ullam? Doloribus dicta nesciunt dolorum necessitatibus!
-                        Esse, maxime animi?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="cursor-pointer transition-transform transform hover:scale-105 hover:rotate-2 rounded-[25px] transition-all duration-300 ease-in-out max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:mx-2 before:rounded">
-                <div class="flex">
-                    <div class="px-6 py-5">
-                        <p tabindex="0" class="focus:outline-none text-base font-medium leading-none text-white flex items-center">
-                          <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6 mr-2"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                            Integration
-                        </p>
-                        <p tabindex="0" class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2">
-                            Section overview goes here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt recusandae asperiores ullam? Doloribus dicta nesciunt dolorum necessitatibus! Esse, maxime animi?
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </section>
-          <!-- Cards ends -->
-        </section>
-        <!-- Link4 end -->
-
-        <!-- Link5 starts -->
-        <section id="link5">
-          <div class="h-full mt-10">
-            <p class="font-normal text-2xl">Colors</p>
-            <p class="text-sm pt-5 pb-4">Colors used in this project</p>
           </div>
-
-          <!-- Reference Start -->
-          <section id="link5_1" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">Reference</p>
-              <p class="text-sm pt-2 pb-4">
-                Gradient Color:
-                <a
-                  class="underline"
-                  href="https://uigradients.com"
-                  target="_blank"
-                  >https://uigradients.com</a
-                >
-              </p>
-            </div>
-          </section>
-          <!-- Reference ends -->
         </section>
-        <!-- Link5 ends -->
+        <!-- Buttons ends -->
 
-        <!-- Link6 starts -->
-        <section id="link6">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Issues</p>
+        <!-- Tailwind css start -->
+        <section id="link4_3" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Tailwind CSS</p>
             <p class="text-sm pt-5 pb-4">
-              If you have any issue please raise a PR in github
-              <a
-                href="https://github.com/lmas3009/cleandocs-template"
-                target="_blank"
-                class="bg-gray-300 text-slate-700 rounded p-1 hover:text-pink-400"
-                >cleandocs-template</a
-              >
+              Install Tailwind CSS
+              <a href="https://tailwindcss.com" target="_blank" class="underline">https://tailwindcss.com</a>
             </p>
           </div>
         </section>
-        <!-- Link6 ends -->
-      </div>
+        <!-- Tailwind css ends -->
+
+        <!-- Cards start -->
+        <section id="link4_4" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Cards</p>
+            <div class="pt-5 pb-4 flex flex-cols">
+              <div
+                class="max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:rounded">
+                <div class="flex">
+                  <div class="px-6 py-5">
+                    <p tabindex="0"
+                      class="focus:outline-none text-base font-medium leading-none text-white flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path
+                          d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                      </svg>
+                      Introduction
+                    </p>
+                    <p tabindex="0"
+                      class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2">
+                      Section overview goes here. Lorem ipsum dolor, sit amet
+                      consectetur adipisicing elit. Sunt recusandae asperiores
+                      ullam? Doloribus dicta nesciunt dolorum necessitatibus!
+                      Esse, maxime animi?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-5 pb-4 flex flex-cols">
+              <div
+                class="max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:rounded">
+                <div class="flex">
+                  <div class="px-6 py-5">
+                    <p tabindex="0"
+                      class="focus:outline-none text-base font-medium leading-none text-white flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      Installation
+                    </p>
+                    <p tabindex="0"
+                      class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2">
+                      Section overview goes here. Lorem ipsum dolor, sit amet
+                      consectetur adipisicing elit. Sunt recusandae asperiores
+                      ullam? Doloribus dicta nesciunt dolorum necessitatibus!
+                      Esse, maxime animi?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="cursor-pointer transition-transform transform hover:scale-105 hover:rotate-2 rounded-[25px] transition-all duration-300 ease-in-out max-w-sm rounded shadow bg-white bg-gradient-to-br from-[#302b63] to-[#2c3e50] block -inset-1 -skew-y-3 relative inline-block before:block before:absolute before:-inset-1 before:bg-[#F27121] before:h-2 before:mx-2 before:rounded">
+              <div class="flex">
+                <div class="px-6 py-5">
+                  <p tabindex="0"
+                    class="focus:outline-none text-base font-medium leading-none text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Integration
+                  </p>
+                  <p tabindex="0" class="focus:outline-none text-base leading-2 text-gray-300 dark:text-gray-400 pt-2">
+                    Section overview goes here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
+                    recusandae asperiores ullam? Doloribus dicta nesciunt dolorum necessitatibus! Esse, maxime animi?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cards ends -->
+      </section>
+      <!-- Link4 end -->
+
+      <!-- Link5 starts -->
+      <section id="link5">
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Colors</p>
+          <p class="text-sm pt-5 pb-4">Colors used in this project</p>
+        </div>
+
+        <!-- Reference Start -->
+        <section id="link5_1" class="border-l-[2px]">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">Reference</p>
+            <p class="text-sm pt-2 pb-4">
+              Gradient Color:
+              <a class="underline" href="https://uigradients.com" target="_blank">https://uigradients.com</a>
+            </p>
+          </div>
+        </section>
+        <!-- Reference ends -->
+      </section>
+      <!-- Link5 ends -->
+
+      <!-- Link6 starts -->
+      <section id="link6">
+        <div class="h-full mt-5">
+          <p class="font-normal text-2xl">Issues</p>
+          <p class="text-sm pt-5 pb-4">
+            If you have any issue please raise a PR in github
+            <a href="https://github.com/lmas3009/cleandocs-template" target="_blank"
+              class="bg-gray-300 text-slate-700 rounded p-1 hover:text-pink-400">cleandocs-template</a>
+          </p>
+        </div>
+      </section>
+      <!-- Link6 ends -->
     </div>
-    <!-- Footer starts here -->
-    <footer style="margin-top: auto;">
-      <div class="dark:bg-white bg-slate-900 h-38 py-1 px-1 mt-5">
-        <div
-          tabindex="0"
-          aria-label="footer"
-          class="focus:outline-none mx-auto container flex flex-col items-center justify-center"
-        >
-          <div class="text-black flex flex-col md:items-center f-f-l pt-0">
-            <div class="my-6 text-base text-color f-f-l">
-              <ul class="md:flex items-center">
-                <li class="cursor-pointer pt-4 lg:py-0">
-                  <a
-                    href="./index.html"
-                    class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200"
-                    >Home
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="text-sm text-color mb-10 f-f-l">
-              <!-- Rename cleandocs with your respective name -->
-              <p tabindex="0" class="text-white dark:text-black focus:outline-none">
-                &copy; 2022 Cleandocs. All rights reserved
-              </p>
-            </div>
+  </div>
+  <!-- Footer starts here -->
+  <footer style="margin-top: auto;">
+    <div class="dark:bg-white bg-slate-900 h-38 py-1 px-1 mt-5">
+      <div tabindex="0" aria-label="footer"
+        class="focus:outline-none mx-auto container flex flex-col items-center justify-center">
+        <div class="text-black flex flex-col md:items-center f-f-l pt-0">
+          <div class="my-6 text-base text-color f-f-l">
+            <ul class="md:flex items-center">
+              <li class="cursor-pointer pt-4 lg:py-0">
+                <a href="./index.html"
+                  class="text-white dark:text-black focus:outline-none focus:underline hover:text-gray-200">Home
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-sm text-color mb-10 f-f-l">
+            <!-- Rename cleandocs with your respective name -->
+            <p tabindex="0" class="text-white dark:text-black focus:outline-none">
+              &copy; 2022 Cleandocs. All rights reserved
+            </p>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Footer ends here -->
-  </body>
+    </div>
+  </footer>
+  <!-- Footer ends here -->
+</body>
+
 </html>
