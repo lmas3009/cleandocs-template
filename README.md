@@ -28,7 +28,7 @@ flowchart TD
   E --> F[Made Some Changes];
   F --> G[Commit Changes];
   G -- On GitHub --> H[Create Pull Request];
-  H -- If Rejected -- Made Changes Again --> F;
+  H -- If Rejected --> F[Made Changes Again];
   H -- If Approved --> I[Changes Done]
 ```
 
